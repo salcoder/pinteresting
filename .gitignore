@@ -15,4 +15,5 @@
 /log/*.log
 /tmp
 
+# DO NOT TRACK
 .DS_Store
