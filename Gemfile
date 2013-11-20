@@ -31,6 +31,9 @@ gem 'jbuilder', '~> 1.2'
 # BOOTSTRAP SASS GEM
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 
+# DEVISE GEM
+gem "devise", "~> 3.2.1"
+
 
 group :development, :test do
 	gem 'sqlite3'
