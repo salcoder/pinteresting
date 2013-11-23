@@ -1,8 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Orbitron:400,700);
 
-$body-bg: 		#000000;
+$body-bg: 		#ecf0f1;
 $font-family-sans-serif:	'Orbitron', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$navbar-default-bg: #27ae60;
+$navbar-default-bg: #000;
 $navbar-default-link-color: white;
 $brand-primary: #f39c12;
 $jumbotron-bg: #bdc3c7;
@@ -14,4 +14,8 @@ $jumbotron-bg: #bdc3c7;
 
 .navbar-brand {
 	font-weight: bold;
+}
+
+html body{
+	background: url('background.jpeg');
 }
