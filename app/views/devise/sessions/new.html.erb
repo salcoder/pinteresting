@@ -1,40 +1,32 @@
-<div class="panel panel-default" style="background: rgba(255,255,255,0.85)">
-	<div class="panel-heading" style="background: rgba(255,255,255,0.85)">
-		<h2>Customer Feedback Form</h2>
-    <h4>Please complete the information below and click the <strong>Submit Feedback</strong> button. <br />Your feedback
-      is greatly appreciated.</h4>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h2>Sign in</h2>
 	</div>
 
 	<div class="panel-body">
-    <div class="form-group">
-      <label for="First_Name">First Name</label>:
-      <input type="text" class="form-control" />
-    </div>
-
+		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  		
 		<div class="form-group">
-	   <label for="Last_Name">Last Name</label>:
-     <input type="text" class="form-control" />		
-  	</div>
+	  		<%= f.label :email %><br />
+	  		<%= f.email_field :email, :autofocus => true, class: 'form-control' %>
+  		</div>
 
-  	<div class="form-group">
-  		<label for="Email_Address">Email Address</label>:
-      <input type="text" class="form-control" />	
-  	</div>
+  		<div class="form-group">
+  			<%= f.label :password %><br />
+  			<%= f.password_field :password, class: 'form-control' %>
+  		</div>
 
-  	<div class="form-group">
-  			<select name="state" class='form-control'>
-          <option value="" selected="selected">Select your State</option>
-        </select>
-  	</div>
+  		<% if devise_mapping.rememberable? -%>
+    	<%= f.check_box :remember_me %> <%= f.label :remember_me%>
+  		<% end -%>
 
-    <div class="form-group">
-      <label for="Feedback">Feedback</label>:
-      <textarea class="form-control" rows="3">Please enter your feedback inside this box.</textarea>
-    </div> <!-- panel-body -->
-  </div>
+  		<div class="from-group">
+  			<%= f.submit "Sign in", class: "btn btn-primary" %>
+  		</div>
+  	</div> <!-- panel-body -->
+	<% end %>
 
-	<div class="panel-footer" style="background: rgba(255,255,255,0.85)">
-		<button type="button" class="btn btn-default">Submit Feedback</button>
-    <button type="button" class="btn btn-default">Clear Form</button>
+	<div class="panel-footer">
+		<%= render "devise/shared/links" %>
 	</div>
 </div> <!-- panel panel-default -->
